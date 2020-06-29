@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-oOs/gFavzADqv3i5nCM+9CzXe3e5vXLXZ5LZ7PplpsWpTCufB7kqkTlC9FtZ5nJo" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar nav-dark bg-primary">
+        <a href="#" class="navbar-brand" style="color: aliceblue; text-decoration: none;">
+            Product.App
+        </a>
+    </nav>
+
+    <div class="container">
+
+        <!-- APPLICATION -->
+        <div id=app class="row pt-5">
+            <div class="col-md-4">
+                <!-- FORM -->
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Add a Product:</h4>
+                    </div>                    
+                        <form id="product-form" class="card-body">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Product Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="price" step="0.01" placeholder="Price Product" min="0" class="form-control">
+                            </div>    
+                            <div class="form-group">
+                                <input type="number" id="year" placeholder="Year Product" class="form-control" min="1970" max="2020">
+                            </div>                            
+                            <input type="submit" value="Add" class="btn btn-primary btn-block">
+                        </form>                    
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- LIST -->
+                <div id="product-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
